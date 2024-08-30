@@ -3,7 +3,6 @@ import { clusterApiUrl, Connection, PublicKey, SystemProgram, Transaction } from
 import * as multisig from "@sqds/multisig";
 import * as anchor from "@coral-xyz/anchor";
 import { redirect } from "next/navigation";
-import { publicKey } from "@coral-xyz/anchor/dist/cjs/utils";
 
 async function validateQueryParams(requestUrl: URL) {
   const connection = new Connection(clusterApiUrl("mainnet-beta"));
