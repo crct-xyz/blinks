@@ -13,7 +13,7 @@ export default function Page() {
     setAddress(event.target.value);
   }
 
-  const handleOnClick = (e) => {
+  const handleOnClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault()
     setShowUrlPage(false)
     console.log(`http://localhost:3000/api/action/approve?squad=${address}`)
