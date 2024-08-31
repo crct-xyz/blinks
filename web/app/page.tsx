@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 
 export default function Page() {
     const [address, setAddress] = useState("");
+  const [showUrlpage, setShowUrlPage] = useState(true);
     const router  = useRouter();
     const handleAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
         setAddress(event.target.value);
