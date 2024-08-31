@@ -11,15 +11,14 @@ function UrlPage({ address }) {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <div className={styles.text1}>Your link:</div>
-                <div className={styles.box}>
+                {/* <div className={styles.text1}>Your link:</div> */}
+                {/* <div className={styles.box}>
                     <div className={styles.link}>{`https://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}</div>
                     <div className='copy-button cursor-pointer' data-clipboard-text={`https://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}><FaCopy /></div>
-                </div>
-                <div className={styles.text2}>Paste the link <a className={styles.span} href='https://dial.to/'>here</a> to generate your blink</div>
+                </div> */}
+                 <a className={styles.span} target="_blank" href={`https://dial.to/developer?url=https://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}>Your Link</a>
             </div>
         </div>
-
     )
 }
 

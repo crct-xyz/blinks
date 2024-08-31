@@ -40,5 +40,7 @@
     margin-top: 3vh;
 }
 .span {
-    color: rgb(238, 49, 87);
+    color: blue;
+    font-size: 50px;
+    font-family: monospace;
 }
