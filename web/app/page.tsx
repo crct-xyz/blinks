@@ -10,7 +10,7 @@ export default function Page() {
 
     }
 
-    const handleOnClick = (e) => {
+    const handleOnClick = (e: { preventDefault: () => void; }) => {
         e.preventDefault()
         router.push(`/api/action/approve?squad=${address}`)
     };
