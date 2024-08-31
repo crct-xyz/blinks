@@ -16,7 +16,7 @@ function UrlPage({ address }) {
                     <div className={styles.link}>{`https://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}</div>
                     <div className='copy-button cursor-pointer' data-clipboard-text={`https://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}><FaCopy /></div>
                 </div> */}
-                 <a className={styles.span} target="_blank" href={`https://dial.to/developer?url=https://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}>Your Link</a>
+                 <a className={styles.span} target="_blank" href={`https://dial.to/?action=solana-action%3Ahttps://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}>Your Link</a>
             </div>
         </div>
     )
