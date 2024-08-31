@@ -1,4 +1,5 @@
 "use client"
+import styles from './homePage.module.css';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { redirect } from "next/navigation";
@@ -18,21 +19,42 @@ export default function Page() {
     console.log(`http://localhost:3000/api/action/approve?squad=${address}`)
   };
 
+  const items = Array.from({ length: 500 }, (_, i) => i);
+
   return (
-    <div className="flex h-screen bg-pink-500">
-      <div className="w-screen h-screen flex flex-col justify-center items-center">
+    <div className={styles.container}>
+      <div className={styles.text}>
+        <div className={styles.bodyText}>
+          {items.map((_, i) => (
+            <>SqUiNt&nbsp;</>
+          ))}
+        </div>
+        <div className={styles.oppDir}>
+          {items.map((_, i) => (
+            <p>SqUiNt&nbsp;</p>
+          ))}
+        </div>
+        <div className={styles.bodyText}>
+          {items.map((_, i) => (
+            <>SqUiNt&nbsp;</>
+          ))}
+        </div>
+        <div className={styles.oppDir}>
+          {items.map((_, i) => (
+            <p>SqUiNt&nbsp;</p>
+          ))}
+        </div>
+      </div>
         {showUrlpage ? (
-          <form action="" method="get" >
-          <div>
-            <label htmlFor="address">Enter your email: </label>
-            <input type="text" value={address} id="address" onChange={handleAddress} />
+          <div className={styles.formWrapper}>
+            <div className={styles.weirdHeader}>SqUinT</div>
+            <form className={styles.form} action="" method="get" >
+              <h1 className={styles.header}>Enter your wallet address</h1>
+              <input className='bg-transparent border-solid border-2 border-black rounded-xl w-96 h-9' type="text" value={address} id="address" onChange={handleAddress} />
+              <input className={styles.submitButton} type="submit" value="Submit" onClick={handleOnClick} />
+          </form>
           </div>
-          <div>
-            <input type="submit" value="Submit" onClick={handleOnClick} />
-          </div>
-        </form>
         ) : <UrlPage address={address} />}
       </div>
-    </div>
   );
 }

@@ -1,0 +1,44 @@
+.wrapper {
+    background-color: #FCEADE;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    box-shadow: 0px 0px 50px -26px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 7vh;
+    font-family: "Poppins";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40%;
+}
+.text1 {
+    font-family: "DayDream";
+    color: rgb(74, 74, 255);
+    font-size: 4vh;
+    margin-bottom: 0.7vh;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 2vh;
+    color: black;
+}
+.link {
+    white-space: nowrap;
+}
+.text2 {
+    font-family: "CocogooseProTrial";
+    color: #000000;
+    font-size: 3vh;
+    margin-top: 3vh;
+}
+.span {
+    color: rgb(238, 49, 87);
+}

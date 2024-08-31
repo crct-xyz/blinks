@@ -1,0 +1,97 @@
+.container {
+    background-color: #FFE500;
+    height: 100vh;
+    overflow: hidden;
+}
+.bodyText {
+    font-family: "Margin DEMO";
+    font-size: 100px;
+    line-height: 10vh;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #FF50F8;
+    opacity: 63%;
+    animation-name: moving;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.oppDir {
+    font-family: "Margin DEMO";
+    font-size: 100px;
+    line-height: 10vh;
+    color: #FF50F8;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 63%;
+    animation-name: movingOpp;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes movingOpp {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+.formWrapper {
+    background-color: #FCEADE;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    box-shadow: 0px 0px 50px -26px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 7vh;
+    font-family: "Poppins";
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30%;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.weirdHeader {
+    font-family: "DayDream";
+    font-size: 15vh;
+    color: rgb(74, 74, 255);
+}
+.header {
+    font-family: "CocogooseProTrial";
+    color: #000000;
+    font-size: 3vh;
+    margin-top: 3vh;
+    margin-bottom: 0.7vh;
+}
+.submitButton {
+    margin-top: 2vh;
+    padding: 1.5vh 0;
+    width: 40%;
+    color: white;
+    background-color: #FF50F8;
+    border-radius: 50px;
+    cursor: pointer;
+}
