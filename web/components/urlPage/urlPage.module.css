@@ -10,14 +10,14 @@
     align-items: center;
     flex-direction: column;
     padding: 7vh;
-    font-family: "Poppins";
+    font-family: monospace;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 40%;
 }
 .text1 {
-    font-family: "DayDream";
+  font-family: monospace;
     color: rgb(74, 74, 255);
     font-size: 4vh;
     margin-bottom: 0.7vh;
@@ -34,7 +34,7 @@
     white-space: nowrap;
 }
 .text2 {
-    font-family: "CocogooseProTrial";
+  font-family: monospace;
     color: #000000;
     font-size: 3vh;
     margin-top: 3vh;
@@ -42,5 +42,5 @@
 .span {
     color: blue;
     font-size: 50px;
-    font-family: monospace;
+
 }
