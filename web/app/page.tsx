@@ -10,11 +10,6 @@ export default function Page() {
         setAddress(event.target.value);
 
     }
-
-    const handleOnClick = (e: { preventDefault: () => void; }) => {
-        e.preventDefault()
-        router.push(`/api/action/approve?squad=${address}`)
-    };
   const handleOnClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault()
     setShowUrlPage(false)
