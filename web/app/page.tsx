@@ -2,15 +2,16 @@
 import styles from './homePage.module.css';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { redirect } from "next/navigation";
+import UrlPage from '@/components/urlPage/UrlPage';
 
 export default function Page() {
-    const [address, setAddress] = useState("");
+  const [address, setAddress] = useState("");
   const [showUrlpage, setShowUrlPage] = useState(true);
-    const router  = useRouter();
-    const handleAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setAddress(event.target.value);
-
-    }
+  const router = useRouter();
+  const handleAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAddress(event.target.value);
+  }
 
   const handleOnClick = (e: { preventDefault: () => void; }) => {
     e.preventDefault()
@@ -57,4 +58,3 @@ export default function Page() {
       </div>
   );
 }
-
