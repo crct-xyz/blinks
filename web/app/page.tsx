@@ -24,7 +24,7 @@ export default function Page() {
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <div className={styles.bodyText}>
+        {/* <div className={styles.bodyText}>
           {items.map((_, i) => (
             <>SqUiNt&nbsp;</>
           ))}
@@ -43,7 +43,7 @@ export default function Page() {
           {items.map((_, i) => (
             <p>SqUiNt&nbsp;</p>
           ))}
-        </div>
+        </div> */}
       </div>
         {showUrlpage ? (
           <div className={styles.formWrapper}>
