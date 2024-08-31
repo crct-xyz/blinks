@@ -51,10 +51,8 @@
 }
 .formWrapper {
     background-color: #FCEADE;
-    border-radius: 10px;
+    border-radius: 50px;
     overflow: hidden;
-    border-top-right-radius: 75px;
-    border-bottom-left-radius: 75px;
     box-shadow: 0px 0px 50px -26px #000000;
     display: flex;
     justify-content: center;
