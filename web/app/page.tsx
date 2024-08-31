@@ -49,7 +49,7 @@ export default function Page() {
           <div className={styles.formWrapper}>
             <div className={styles.weirdHeader}>SqUinT</div>
             <form className={styles.form} action="" method="get" >
-              <h1 className={styles.header}>Enter your wallet address</h1>
+              <h1 className={styles.header}>Enter your Multisig Account key:</h1>
               <input className='bg-transparent border-solid border-2 border-black rounded-xl w-96 h-9' type="text" value={address} id="address" onChange={handleAddress} />
               <input className={styles.submitButton} type="submit" value="Submit" onClick={handleOnClick} />
           </form>
