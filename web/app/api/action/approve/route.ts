@@ -66,7 +66,7 @@ export const GET = async (request: Request) => {
 
     const payload: ActionGetResponse = {
       title: `Approve ${meta.name} Transaction`,
-      icon: "https://ucarecdn.com/7aa46c85-08a4-4bc7-9376-88ec48bb1f43/-/preview/880x864/-/quality/smart/-/format/auto/",
+      icon: "https://ucarecdn.com/2666eeb6-5215-4271-bfc8-261a0f8291ba/-/preview/199x199/",
       description: `Cast your vote on transaction #${transactionIndex} for ${meta.name}`,
       label: "SquadsTransaction",
       links: {
