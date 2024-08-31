@@ -15,6 +15,7 @@ export default function Page() {
         router.push(`/api/action/approve?squad=${address}`)
     };
 
+
   return (
     <div className="flex h-screen bg-pink-500">
       <div className="w-screen h-screen flex flex-col justify-center items-center">
@@ -32,3 +33,4 @@ export default function Page() {
     </div>
   );
 }
+
