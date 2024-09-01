@@ -2,6 +2,7 @@
 import styles from './homePage.module.css';
 import { useState } from 'react';
 import UrlPage from '@/components/urlPage/UrlPage';
+// import {Image} from "next/image";
 
 export default function Page() {
   const [address, setAddress] = useState("");
@@ -26,22 +27,28 @@ export default function Page() {
     <div className={styles.container}>
       <div className={styles.text}>
       {showUrlPage ? (
-        <div className={styles.formWrapper}>
-          <div className={styles.weirdHeader}>SqUinT</div>
-          <form className={styles.form} action="" method="get">
-            <h1 className={styles.header}>Enter your wallet address</h1>
-            <input
-              className='bg-transparent border-solid border-2 border-black rounded-xl w-96 h-9'
-              type="text"
-              value={address}
-              id="address"
-              onChange={handleAddress}
-            />
-            <button className={styles.submitButton} onClick={handleOnClick}>
-              Submit
-            </button>
-          </form>
-        </div>
+
+
+<div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center">
+    <img src="https://ucarecdn.com/2666eeb6-5215-4271-bfc8-261a0f8291ba/-/preview/199x199/" alt="" />
+    <p className="mb-3  text-gray-700 dark:text-gray-400">GM Blinker!
+      Thanks for using our service!
+      To have the best blinker experience please take following steps:</p>
+      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">1. Enter the multi-sig account number and submit.</p>
+      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">2. You will be redirected to the blink where you can approve your Squads multi-sig transaction.</p>
+    <h2 className="mb-3 font-normal text-gray-700 dark:text-gray-400">Enter your Multisig Account Key:</h2>
+    <input
+        className='border-solid border-2 border-black rounded-xl h-9'
+        style={{backgroundColor: "#d9d9d9", height: "45px"}}
+        type="text"
+        value={address}
+        id="address"
+        onChange={handleAddress}
+      />
+      <button className={styles.submitButton}  onClick={handleOnClick}>
+        Submit
+      </button>
+    </div>
       ) : (
         <UrlPage address={address} baseUrl={baseUrl} />
       )}

@@ -2,6 +2,9 @@
     background-color: #333333;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bodyText {
   font-family: monospace;
@@ -87,9 +90,8 @@
 .submitButton {
     margin-top: 2vh;
     padding: 1.5vh 0;
-    width: 40%;
     color: white;
-    background-color: #FF50F8;
-    border-radius: 50px;
+    background-color: #1C71FF;
+    border-radius: 15px;
     cursor: pointer;
 }
