@@ -38,13 +38,14 @@ export default function Page() {
       <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">2. You will be redirected to the blink where you can approve your Squads multi-sig transaction.</p>
     <h2 className="mb-3 font-normal text-gray-700 dark:text-gray-400">Enter your Multisig Account Key:</h2>
     <input
-        className='bg-transparent border-solid border-2 border-black rounded-xl h-9'
+        className='border-solid border-2 border-black rounded-xl h-9'
+        style={{backgroundColor: "#d9d9d9", height: "45px"}}
         type="text"
         value={address}
         id="address"
         onChange={handleAddress}
       />
-      <button className={styles.submitButton} onClick={handleOnClick}>
+      <button className={styles.submitButton}  onClick={handleOnClick}>
         Submit
       </button>
     </div>
