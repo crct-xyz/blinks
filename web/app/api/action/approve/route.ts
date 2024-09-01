@@ -1,4 +1,3 @@
-
 import {
   Action,
   ActionGetRequest,
@@ -19,6 +18,10 @@ import * as multisig from '@sqds/multisig';
 import * as anchor from '@coral-xyz/anchor';
 import { redirect } from 'next/navigation';
 import { publicKey } from '@coral-xyz/anchor/dist/cjs/utils';
+import { BlinksightsClient } from 'blinksights-sdk';
+
+require('dotenv').config();
+const client = new BlinksightsClient(process.env.BLINKSITES as string);
 
 async function validateQueryParams(requestUrl: URL) {
   const connection = new Connection(clusterApiUrl('mainnet-beta'));
@@ -84,46 +87,48 @@ export const GET = async (request: Request) => {
 
     const meta = multisigInfo.metadata;
 
-    const payload: ActionGetResponse = {
-      title: `Approve ${meta.name} Transaction`,
-      icon: 'https://ucarecdn.com/7aa46c85-08a4-4bc7-9376-88ec48bb1f43/-/preview/880x864/-/quality/smart/-/format/auto/',
-      description: `Cast your vote on transaction #${transactionIndex} for ${meta.name}`,
-      label: 'SquadsTransaction',
-      links: {
-        actions: [
+// Construct the action object
+const action: ActionGetResponse = {
+  title: `Approve ${meta.name} Transaction`,
+  icon: 'https://ucarecdn.com/7aa46c85-08a4-4bc7-9376-88ec48bb1f43/-/preview/880x864/-/quality/smart/-/format/auto/',
+  description: `Cast your vote on transaction #${transactionIndex} for ${meta.name}`,
+  label: 'SquadsTransaction',
+  links: {
+      actions: [
           {
-            label: 'Approve',
-            href: `${baseHref}&action=${'Approve'}`,
+              label: 'Approve',
+              href: `${baseHref}&action=Approve`,
           },
           {
-            label: 'Reject',
-            href: `${baseHref}&action=${'Reject'}`,
+              label: 'Reject',
+              href: `${baseHref}&action=Reject`,
           },
           {
-            label: 'Approve & Execute',
-            href: `${baseHref}&action=${'ApproveExecute'}`,
+              label: 'Approve & Execute',
+              href: `${baseHref}&action=ApproveExecute`,
           },
-          {
-            href: `${baseHref}&publicAddress={publicAddress}`,
-            label: 'publicAddress',
-            parameters: [
-              {
-                name: 'publicAddress',
-                label: 'whatever',
-              },
-            ],
-          },
-        ],
-      },
-    };
+      ],
+  },
+};
 
-    return Response.json(payload, {
+// Create the response payload
+const payload = await client.createActionGetResponseV1(request.url, action);
+
+// Return the response as JSON
+return new Response(JSON.stringify(payload), {
+  status: 200,
+  headers: ACTIONS_CORS_HEADERS,
+});
+
+  } catch (err) {
+    console.error('Error in GET request:', err);
+    return new Response('Failed to process the request.', {
+      status: 500,
       headers: ACTIONS_CORS_HEADERS,
     });
-  } catch (err) {
-    console.log(err);
   }
 };
+;
 
 export const OPTIONS = GET;
 
