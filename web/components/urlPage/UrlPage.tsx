@@ -3,14 +3,14 @@ import styles from './urlPage.module.css'
 import Clipboard from 'clipboard';
 
 
-function UrlPage({ address }: {address: string}) {
+function UrlPage({ address, baseUrl }: {address: string, baseUrl: string}) {
     useEffect(() => {
         new Clipboard('.copy-button');
     }, []);
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                 <a className={styles.span} target="_blank" href={`https://dial.to/?action=solana-action%3Ahttps://blinks-ecru.vercel.app/api/action/approve?squad=${address}`}>Your Link</a>
+                 <a className={styles.span} target="_blank" href={`https://dial.to/?action=solana-action%3A${baseUrl}/api/action/approve?squad=${address}`}>Your Link</a>
             </div>
         </div>
     )
