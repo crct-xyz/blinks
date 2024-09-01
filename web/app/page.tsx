@@ -25,17 +25,6 @@ export default function Page() {
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <div className={styles.bodyText}>
-          {items.map((item, i) => (
-            <span key={`bodyText-${i}`} dangerouslySetInnerHTML={{ __html: item }} />
-          ))}
-        </div>
-        <div className={styles.oppDir}>
-          {items.map((item, i) => (
-            <p key={`oppDir-${i}`} dangerouslySetInnerHTML={{ __html: item }} />
-          ))}
-        </div>
-      </div>
       {showUrlPage ? (
         <div className={styles.formWrapper}>
           <div className={styles.weirdHeader}>SqUinT</div>
@@ -57,5 +46,5 @@ export default function Page() {
         <UrlPage address={address} baseUrl={baseUrl} />
       )}
     </div>
-  );
-}
+    </div>
+    )}
