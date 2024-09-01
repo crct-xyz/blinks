@@ -44,3 +44,7 @@ Thumbs.db
 .next
 out
 .vercel
+
+# env
+env
+.env
