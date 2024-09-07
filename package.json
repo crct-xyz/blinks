@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "0.5.13",
     "@tanstack/react-query": "5.40.0",
     "@tanstack/react-query-next-experimental": "5.40.0",
-    "blinksights-sdk": "^1.0.11",
+    "blinksights-sdk": "^1.0.19",
     "bs58": "5.0.0",
     "buffer": "6.0.3",
     "clipboard": "^2.0.11",
