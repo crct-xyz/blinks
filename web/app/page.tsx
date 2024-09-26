@@ -30,7 +30,7 @@ export default function Page() {
 
 
 <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-center">
-    <img src="https://ucarecdn.com/c3851479-9177-440b-811f-b6673555c302/-/preview/168x168/" alt="" />
+    <img src="https://ucarecdn.com/f4ab2523-d764-46fa-8377-728cd766ff95/-/preview/168x168/" alt="" />
     <p className="mb-3  text-gray-700 dark:text-gray-400">GM Blinker!
       Thanks for using our service!
       To have the best blinker experience please take following steps:</p>
