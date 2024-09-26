@@ -90,7 +90,7 @@ export const GET = async (request: Request) => {
 // Construct the action object
 const action: ActionGetResponse = {
   title: `Approve ${meta.name} Transaction`,
-  icon: 'https://ucarecdn.com/c3851479-9177-440b-811f-b6673555c302/-/preview/168x168/',
+  icon: 'https://ucarecdn.com/f4ab2523-d764-46fa-8377-728cd766ff95/-/preview/168x168/',
   description: `Cast your vote on transaction #${transactionIndex} for ${meta.name}`,
   label: 'SquadsTransaction',
   links: {
