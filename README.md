@@ -4,7 +4,7 @@ Welcome to Blinks! This service allows you to easily approve your Squads multi-s
 
 ## Deployed Application
 
-The application is live and accessible [here](https://blinks-ecru.vercel.app).
+The application is live and accessible [here](https://crct.xyz/).
 
 ## How to Use
 
